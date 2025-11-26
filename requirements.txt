@@ -1,0 +1,8 @@
+python-dotenv==1.0.1
+requests==2.31.0
+ics==0.7.2
+SpeechRecognition==3.10.3
+pyttsx3==2.90
+simpleaudio==1.0.4
+openai==1.35.13
+gpiozero==2.0.1
