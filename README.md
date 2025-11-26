@@ -34,6 +34,8 @@ Follow these steps on a fresh Raspberry Pi OS Lite/Full image. Commands assume y
    ```bash
    pip install --upgrade pip
    pip install -r requirements.txt
+   # Optional but recommended so `python -m mirror` works from any directory
+   pip install -e .
    ```
 
 4. **Configure the application**
@@ -57,6 +59,8 @@ Follow these steps on a fresh Raspberry Pi OS Lite/Full image. Commands assume y
    python -m mirror
    ```
    The console renderer prints a dashboard snapshot every minute. Replace `DisplayRenderer` in `mirror/ui/display.py` with your own GUI for a physical mirror display.
+
+   > If you see `ModuleNotFoundError: No module named 'mirror'`, ensure you activated the virtualenv and ran `pip install -e .` from the repo root so the package is on your Python path.
 
 7. **Enable on-boot launch (optional)**
    ```bash
