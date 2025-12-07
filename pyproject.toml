@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=62"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smart-mirror"
+version = "0.1.0"
+description = "AI-enabled smart mirror for Raspberry Pi"
+readme = "README.md"
+authors = [{name = "Smart Mirror"}]
+license = {text = "MIT"}
+requires-python = ">=3.9"
+dependencies = [
+    "python-dotenv==1.0.1",
+    "requests==2.31.0",
+    "ics==0.7.2",
+    "SpeechRecognition==3.10.3",
+    "pyttsx3==2.90",
+    "simpleaudio==1.0.4",
+    "openai==1.35.13",
+    "gpiozero==2.0.1",
+]
+
+[project.scripts]
+smart-mirror = "mirror.app:main"
